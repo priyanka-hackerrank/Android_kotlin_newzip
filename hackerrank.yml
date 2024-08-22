@@ -1,0 +1,16 @@
+---
+version: 1.0
+configuration:
+  has_webserver: true
+  readonly_paths:
+    - src/test/*
+  scoring:
+    command: ./gradlew clean test
+    files:
+      - app/build/test-results/testDebugUnitTest/TEST-com.hackerrank.android.LocalTests.xml
+  ide_config:
+    default_open_files:
+      - app/src/main/java/com/hackerrank/android/MainActivity.kt
+    project_menu:
+      run: ./gradlew clean build
+      test: ./gradlew clean test
